@@ -14,6 +14,13 @@ body {
   font-family: Inter;
 }
 
+/* globals.css or styles.css */
+.active {
+  color: #38a169; /* Change this to your desired active color */
+  font-weight: bold; /* Make the active link bold */
+  border-bottom: 2px solid #38a169; /* Optional: add an underline */
+}
+
 @layer utilities {
   .btn_white { 
     @apply  border-white bg-white px-8 py-3 text-green-50
