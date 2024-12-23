@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+//the main page just a puch of components
 // use componet do't repeat your self , same column == component
 // use {} inside map and ul  , const can call on any place 
 // SOCIAL.title  ,  FOOTER_LINKS.map((columns))
