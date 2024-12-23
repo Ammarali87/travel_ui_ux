@@ -3,6 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+// use componet do't repeat your self , same column == component
+// use {} inside map and ul  , const can call on any place 
+// SOCIAL.title  ,  FOOTER_LINKS.map((columns))
+// add props to comp  <FooterCam title={title}>
+// props can be Const  <FooterColumn title={FOOTER_CONTACT_INFO.title}>
+// can make w-full to text 
+// nested map  
+// in footer use flex-wrap no flex-col md:flex-row not always
+
 const Footer = () => {
   return (
     <footer className="flexCenter mb-24">
@@ -11,7 +20,7 @@ const Footer = () => {
           <Link href="/" className="mb-10">
             <Image src="hilink-logo.svg" alt="logo" width={74} height={29}/>
           </Link>
-
+                 
           <div className='flex flex-wrap gap-10 sm:justify-between md:flex-1'>
             {FOOTER_LINKS.map((columns) => (
               <FooterColumn title={columns.title}>
@@ -19,8 +28,8 @@ const Footer = () => {
                   {columns.links.map((link) => (
                     <Link href="/" key={link}>
                       {link}
-                    </Link>
-                  ))}
+                    </Link>  
+                  ))}   
                 </ul>
               </FooterColumn>
             ))}
@@ -54,6 +63,11 @@ const Footer = () => {
                   ))}
                 </ul>
               </FooterColumn>
+              <FooterColumn title={SOCIALS.title}>
+              <ul className='regular-14 felx gap-3 text-gray-30'>
+                {}
+              </ul>
+              </FooterColumn>
             </div>
           </div>
         </div>
@@ -63,7 +77,7 @@ const Footer = () => {
       </div>
     </footer>
   )
-}
+}   
 
 type FooterColumnProps = {
   title: string;
@@ -74,9 +88,26 @@ const FooterColumn = ({ title, children }: FooterColumnProps) => {
   return (
     <div className="flex flex-col gap-5">
       <h4 className="bold-18 whitespace-nowrap">{title}</h4>
-      {children}
+      {children}  
     </div>
   )
 }
+ const FooterColumn2 = ({title , children}:FooterColumnProps)=>{
+  return(
+    <div className="felx felx-col gap-3">
+      <h2 className="bold-18 whitespace-nowrap">{title}</h2>
+      {children}
+    </div>
+  )
+ }
+
+
+
+
+
+
+
+
+
 
 export default Footer
