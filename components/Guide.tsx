@@ -1,7 +1,18 @@
+import { useFormik } from 'formik'
 import Image from 'next/image'
 import React from 'react'
 
 const Guide = () => {
+  const formik = useFormik({
+    initialValues: {
+      destination: '',
+      startTrack: '',
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   return (
     <section className="flexCenter flex-col">
       <div className="padding-container max-container w-full pb-24">
