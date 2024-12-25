@@ -1,5 +1,6 @@
 import { PEOPLE_URL } from "@/constants";
 import Image from "next/image";
+import React from 'react'; // Add explicit React import
 
 interface CampProps {
   backgroundImage: string;

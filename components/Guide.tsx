@@ -4,6 +4,7 @@ import React from 'react'
 // can mix cord  md:left-[]5% lg:top-20  not same time change distace
 // shadow need border
 //  some time give flex to all divs  weird
+
 const Guide = () => {
   return (
     <section className="flexCenter flex-col">
