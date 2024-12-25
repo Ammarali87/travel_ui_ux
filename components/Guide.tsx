@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { Formik, Form } from 'formik';
 
 // can mix cord  md:left-[]5% lg:top-20  not same time change distace
 // shadow need border
