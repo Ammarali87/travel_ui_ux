@@ -2,7 +2,7 @@ import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-// this for te
+
 //the main page just a puch of components
 // use componet do't repeat your self , same column == component
 // use {} inside map and ul  , const can call on any place 
@@ -12,6 +12,9 @@ import React from 'react'
 // can make w-full to text 
 // nested map  
 // in footer use flex-wrap no flex-col md:flex-row not always
+// <p className="regular-14 w-full text-center text-gray-20">
+      // Company  {(new Date().getFullYear())}
+// </p>  
 
 const Footer = () => {
   return (
@@ -64,17 +67,17 @@ const Footer = () => {
                   ))}
                 </ul>
               </FooterColumn>
-              <FooterColumn title={SOCIALS.title}>
-              <ul className='regular-14 felx gap-3 text-gray-30'>
-                {}
-              </ul>
-              </FooterColumn>
             </div>
           </div>
         </div>
 
         <div className="border bg-gray-20" />
-        <p className="regular-14 w-full text-center text-gray-30">2023 Hilink | All rights reserved</p>
+        <p className="regular-14 w-full text-center text-gray-30">
+          2023 Hilink | All rights reserved
+          </p>
+      <p className="regular-14 w-full text-center text-gray-20">
+          {(new Date().getFullYear())}
+       </p>  
       </div>
     </footer>
   )
@@ -93,22 +96,6 @@ const FooterColumn = ({ title, children }: FooterColumnProps) => {
     </div>
   )
 }
- const FooterColumn2 = ({title , children}:FooterColumnProps)=>{
-  return(
-    <div className="felx felx-col gap-3">
-      <h2 className="bold-18 whitespace-nowrap">{title}</h2>
-      {children}
-    </div>
-  )
- }
-
-
-
-
-
-
-
-
 
 
 export default Footer
